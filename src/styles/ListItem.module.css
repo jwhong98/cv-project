@@ -1,0 +1,23 @@
+.listItem {
+  display: flex;
+}
+
+.dates {
+  text-transform: uppercase;
+  width: 120px;
+  border-right: 1px solid black;
+  font-size: 0.8rem;
+}
+
+.schoolInfo {
+  padding-left: 5px;
+}
+
+.degree {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.institute {
+  font-weight: 500;
+}

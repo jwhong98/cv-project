@@ -5,7 +5,8 @@ const ListItem = (props) => {
   return (
     <div className={classes.listItem}>
       <div className={classes.dates}>
-        {props.start} - {props.end}
+        {props.start} - <br></br>
+        {props.end}
       </div>
       <div className={classes.schoolInfo}>
         <p className={classes.degree}>{props.degree}</p>
