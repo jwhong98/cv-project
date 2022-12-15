@@ -1,0 +1,22 @@
+.generalInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.generalInfo > header {
+  position: relative;
+}
+
+.editBtn {
+  position: absolute;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.info {
+}

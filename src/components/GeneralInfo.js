@@ -8,7 +8,7 @@ const GeneralInfo = () => {
     name: "Name",
     title: "Title",
     number: "number",
-    address: "Adress",
+    address: "Address",
     email: "Email",
   });
   const [active, setActive] = useState(false);
@@ -19,8 +19,8 @@ const GeneralInfo = () => {
     setUser(input);
   };
   return (
-    <section>
-      <EditBtn onClick={toggleForm} />
+    <section className={classes.generalInfo}>
+      <EditBtn onClick={toggleForm} className={classes.editBtn} />
       <header>
         <h1>{user.name}</h1>
         <p>{user.title}</p>
