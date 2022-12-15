@@ -1,7 +1,11 @@
 import React from "react";
 
 const SubmitBtn = (props) => {
-  return <button onClick={props.onClick}>Submit</button>;
+  const onClickHandler = () => {
+    props.toggleForm();
+    props.onClick();
+  };
+  return <button onClick={onClickHandler}>Submit</button>;
 };
 
 export default SubmitBtn;

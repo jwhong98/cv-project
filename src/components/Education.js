@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "../styles/Education.module.css";
 import CVForm from "./CVForm";
+import EditBtn from "./EditBtn";
 import ListItem from "./ListItem";
 
 const Education = () => {
@@ -11,6 +12,13 @@ const Education = () => {
     degree: "",
     institute: "",
   });
+  const [active, setActive] = useState(false);
+
+  const onSubmitHandler = (input) => {
+    setListing(input);
+    setEducation((oldEducation) => [...oldEducation, input]);
+  };
+
   const createListItem = (info) => {
     return (
       <ListItem
@@ -21,13 +29,24 @@ const Education = () => {
       />
     );
   };
+
+  const toggleForm = () => {
+    setActive(!active);
+  };
   return (
     <section className={classes.education}>
+      <EditBtn onClick={toggleForm} />
       <h2>Education</h2>
       <div className={classes.educationContainer}>
         {education.map(createListItem)}
       </div>
-      <CVForm data={education} />
+      {active && (
+        <CVForm
+          data={listing}
+          onSubmit={onSubmitHandler}
+          toggleForm={toggleForm}
+        />
+      )}
     </section>
   );
 };

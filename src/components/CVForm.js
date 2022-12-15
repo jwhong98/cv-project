@@ -27,7 +27,7 @@ const CVForm = (props) => {
   return (
     <div className={classes.formContainer}>
       {keys.map(createInputs)}
-      <SubmitBtn onClick={onSubmitHandler} />
+      <SubmitBtn onClick={onSubmitHandler} toggleForm={props.toggleForm} />
     </div>
   );
 };

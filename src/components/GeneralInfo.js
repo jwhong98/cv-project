@@ -12,7 +12,7 @@ const GeneralInfo = () => {
     email: "Email",
   });
   const [active, setActive] = useState(false);
-  const onEditHandler = () => {
+  const toggleForm = () => {
     setActive(!active);
   };
   const onSubmitHandler = (input) => {
@@ -20,7 +20,7 @@ const GeneralInfo = () => {
   };
   return (
     <section>
-      <EditBtn onClick={onEditHandler} />
+      <EditBtn onClick={toggleForm} />
       <header>
         <h1>{user.name}</h1>
         <p>{user.title}</p>
@@ -30,7 +30,13 @@ const GeneralInfo = () => {
         <p className={classes.info}>{user.address}</p>
         <p className={classes.info}>{user.email}</p>
       </div>
-      {active && <CVForm data={user} onSubmit={onSubmitHandler} />}
+      {active && (
+        <CVForm
+          data={user}
+          onSubmit={onSubmitHandler}
+          toggleForm={toggleForm}
+        />
+      )}
     </section>
   );
 };
