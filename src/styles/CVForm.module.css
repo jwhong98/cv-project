@@ -1,0 +1,29 @@
+.formContainer {
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px; /* Need a specific value to work */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputContainer > label {
+  text-transform: capitalize;
+}
+
+.inputContainer > input {
+  width: 300px;
+  padding: 5px;
+}

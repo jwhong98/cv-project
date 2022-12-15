@@ -14,8 +14,8 @@ const CVForm = (props) => {
   };
   const createInputs = (info) => {
     return (
-      <div key={info}>
-        <label htmlFor={info}>{info}</label>
+      <div key={info} className={classes.inputContainer}>
+        <label htmlFor={info}>{info}:</label>
         <input
           type={info === "number" ? "number" : "text"}
           name={info}
